@@ -1,0 +1,4 @@
+[MASTER]
+load_plugins=pylint-flask
+generated-members=add,commit
+max-line-length=120
