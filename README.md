@@ -26,7 +26,7 @@ cd flask-template
 ```
 pipenv install
 ```
-**WARNING: If you have multiple Python versions or variations of Python2 and Python3 (set as PATH variables) you need to specify Python3 for your virtual environment!**
+**Note: If you have multiple Python versions or variations of Python2 and Python3 (set as PATH variables) you need to specify Python3 for your virtual environment!**
 
 ```
 pipenv install --three
