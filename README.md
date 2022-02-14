@@ -36,6 +36,19 @@ pipenv install --three
 ```
 pipenv shell
 ```
+
+## Install the dependencies
+
+```
+pip install -r requirements.txt
+```
+
+## Set your Bearer Token in views.py
+
+```
+client = tweepy.Client("<YOUR_BEARER_TOKEN>")
+```
+
 # Start the project locally
 
 ```

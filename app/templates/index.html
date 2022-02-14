@@ -3,7 +3,45 @@
 {% block content %}
 
 <main>
-    <h2>Hallo zurück</h2>
+    <h1>Leaflet Cluster Example</h1>
+ 
+    <p>Here's an interactive map indicating where airports and train stations are located around the world.  The data comes from <a href="http://openflights.org/data.html" target="_blank" rel="noopener">OpenFlights.org</a>.
+ 
+    <div id="map" style="width: 800px; height: 500px; border: 1px solid #AAA;"></div>
 </main>
+
+<script>
+var map = L.map( 'map', {
+    center: [10.0, 5.0],
+    minZoom: 2,
+    zoom: 2
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+                attribution : '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+                noWrap      : true 
+}).addTo(map);
+
+var markerClusters = L.markerClusterGroup();
+
+var markers = JSON.parse('{{ markers | tojson | safe}}')
+console.log(typeof(markers))
+console.log(markers)
+
+for ( var i = 0; i < markers.length; ++i )
+{
+  var popup = '<b>' + markers[i].created_at + '</b>' +
+              '<br />' + markers[i].GPE +
+              '<br/>' + markers[i].text;
+ 
+  var m = L.marker( [markers[i].lat, markers[i].lng] )
+                  .bindPopup( popup );
+ 
+  markerClusters.addLayer( m );
+}
+ 
+map.addLayer( markerClusters );
+
+</script>
 
 {% endblock %}
