@@ -1,5 +1,15 @@
-# flask-template
-This repository provides a basic flask template
+# Twitter-Map
+This project shows the location of tweets from specific users on a map.
+
+**Example**
+
+Example for Tweets of @ABC (News Channel)
+
+<ins>Overview</ins>
+![](static/overview.png)
+
+<ins>Detail</ins>
+![](static/details.png)
 
 ## Required Software and Tools
 * [Python 3.7](https://www.python.org/downloads/)

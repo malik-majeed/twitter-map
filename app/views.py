@@ -73,7 +73,7 @@ def extract_gpe(cleansed_text, text, created_at, markers_pin, nlp, geolocator):
 def create_markers():
     geolocator = Nominatim(user_agent="Your_Name")
     client = tweepy.Client("<YOUR_BEARER_TOKEN>")
-    id_users = ['5734902', '9204502', '8720562', '28785486', '759251', '91478624', '87818409']
+    id_users = ['28785486']
     list_of_tweets = []
 
     stop_words_en = stopwords.words('english')
