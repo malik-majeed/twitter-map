@@ -18,17 +18,17 @@ Example for Tweets of @ABC (News Channel)
 ## Clone the project with either SSH or HTTPS and change directory
 
 ```
-git clone git@github.com:malik-majeed/flask-template.git
+git clone git@github.com:malik-majeed/twitter-map.git
 ```
 or
 ```
-git clone https://github.com/malik-majeed/flask-template.git
+git clone https://github.com/malik-majeed/twitter-map.git
 ```
 
 Change the current working directory
 
 ```
-cd flask-template
+cd twiiter-map
 ```
 
 ## Install all dependencies
@@ -47,7 +47,7 @@ pipenv install --three
 pipenv shell
 ```
 
-## Install the dependencies
+## Install the dependencies (shouldn't be necessary)
 
 ```
 pip install -r requirements.txt
